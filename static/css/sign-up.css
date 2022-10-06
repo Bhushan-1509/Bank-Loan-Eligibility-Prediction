@@ -1,0 +1,58 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	font-size: 14px;
+	background: #f2f2f2;
+
+}
+.container
+{
+	background: white;
+	width: 500px;
+	padding: 25px;
+	margin: 50px auto 0;
+	border-top: 5px solid blue;
+	box-shadow: 0 0 7px 5px rgba(0, 0, 0, 0.5);
+}
+
+.container
+{
+	font-size: 15px;
+	line-height: 24px;
+	padding: 30px;
+	text-align: center;
+}
+
+.input-name
+{
+	width: 90%;
+	position: relative;
+	margin: 15px auto;
+
+}
+
+.lock
+{
+	padding: 8px 11px;
+}
+
+.name
+{
+	width: 35%;
+	padding: 8px 0 8px 40px;
+
+}
+
+
+
+.text-name
+{
+	width: 100%;
+	padding: 8px 0 8px 40%;
+}
+
