@@ -2,7 +2,8 @@
 
 {% block title %}Loan  eligibility prediction{% endblock %}
 {% block head %}
-  <link href="url_for('static',filename='css/layout.css')">
+  <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/favicon.png')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
 {% endblock %}
 {% block bodycontent %}
 <header class="site-header sticky-top py-1">
@@ -13,7 +14,7 @@
     <a class="py-2 d-none d-md-inline-block" href="#">About Us</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Business</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">News</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
     <button type="button" class="btn btn-danger" style="height:17%">Sign In</button>
     
@@ -21,34 +22,35 @@
 </header>
 
 <main>
+<div style="width:100%">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
 
-<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
+
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active" data-bs-interval="10000">
-      <img src="url_for('static',filename='images/carousel_img_1.png')" class="d-block w-100" alt="..." style="width:100%;height:85vh">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+
+    <div class="carousel-item active" data-bs-interval="3500">
+      <img src="{{url_for('static',filename = 'images/test.jpg' )}}" class="d-block w-100" alt="..." style="width:100%;height:85vh">
+      <div class="carousel-caption d-none d-md-block" style="margin-top:-12vh">
+            <button class="btn btn-danger btn-lg" style="font-size:16px">More Details</button>
       </div>
     </div>
-    <div class="carousel-item" data-bs-interval="2000">
-      <img src="url_for('static',filename='images/carousel_img_2.png')" class="d-block w-100" alt="..." style="width:90%;height:85vh">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+    <div class="carousel-item" data-bs-interval="3500">
+      <img src="{{url_for('static',filename = 'images/carousel_img_2.png')}}" class="d-block w-100" alt="..." style="width:90%;height:85vh">
+         <div class="carousel-caption d-none d-md-block">
+        <h5 class="display-6">When money is need of the hour,
+        We’ll help you get it, in less than an hour.</h5>
+        <!-- <p>Some representative placeholder content for the first slide.</p> -->
       </div>
     </div>
-    <div class="carousel-item">
-      <img src="url_for('static',filename='images/carousel_img_3.jpg')" class="d-block w-100" alt="..." style="width:100%;height:85vh">
-      <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
-      </div>
+    <div class="carousel-item" data-bs-interval="3500">
+     
+      <img src="{{url_for('static',filename='images/carousel_img_1.jpg')}}" class="d-block w-100" alt="..." style="width:100%;height:85vh">
+    
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -61,81 +63,118 @@
   </button>
 </div>
 
+</div>
 
+<br>
 
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-<div class="container marketing">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card" style="width: 18rem;" style="display:table-cell">
+          <img class="card-img-top" src="{{url_for('static',filename='images/personal-loan.jpg')}}" alt="..." height="280"> 
+          <div class="card-body">
+            <!-- First card -->
+            <h5 class="card-title">Personal Loan</h5>
+            <p class="card-text">Loans for medical emergency, your sibling’s wedding or funds to tackle COVID-19</p>
+            <a href="#" class="btn btn-danger">Check Eligibility</a>
+          </div>
+        </div>
+      </div>
+      <!-- Second card -->
+      <div class="col-lg-4 mb-4">
+        <div class="card" style="width: 18rem;"  style="display:table-cell" >
+          <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="..." height="280">
+          <div class="card-body">
+            <h5 class="card-title">Educational Loan</h5>
+            <p class="card-text">The stepping stone to your dreams, backed by a convenient financial plan</p>
+            <a href="#" class="btn btn-danger">Check Eligibility<a>
+          </div>
+        </div>
+      </div>
+      <!-- Third card -->
+      <div class="col-lg-4 mb-4" style="display:table-cell;margin-left:67%;margin-top:-77vh">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="..." height="280">
+          <div class="card-body">
+            <h5 class="card-title">Other Loan</h5>
+            <p class="card-text">No matter what the need, there’s a secure loan plan for you and meet your urgent need for cash </p>
+            <a href="#" class="btn btn-danger">Check Eligibility<a>
+          </div>
+        </div>
+      </div>
+    </div></div>
+ 
 
-<!-- Three columns of text below the carousel -->
-<div class="row">
-<div class="col-lg-4">
-  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-  <h2 class="fw-normal">Heading</h2>
-  <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-</div><!-- /.col-lg-4 -->
-<div class="col-lg-4">
-  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-  <h2 class="fw-normal">Heading</h2>
-  <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-</div><!-- /.col-lg-4 -->
-<div class="col-lg-4">
-  <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-
-  <h2 class="fw-normal">Heading</h2>
-  <p>And lastly this, the third column of representative placeholder content.</p>
-  <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-</div><!-- /.col-lg-4 -->
-</div><!-- /.row -->
-
-
+  
 <!-- START THE FEATURETTES -->
 
 <hr class="featurette-divider">
 
-<div class="row featurette">
+<div class="row featurette" style="margin-left:7%">
 <div class="col-md-7">
-  <h2 class="featurette-heading fw-normal lh-1">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-  <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">Personal Loan upto ₹ 20 Lakhs <span class="text-muted">.</span></h2>
+  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;If you are looking to meet your working capital requirements or take your business to newer heights, we’ll help you raise funds - by getting you an digital business loan approval in less than 59 minutes. a one-of-its-kind loan facilitating platform, psb59 makes the whole process of procuring MSME loans upto ₹5 crores easy, quick and convenient. what more? we’ll help you choose the best-suited, low-interest, flexible tenure MSME loan by getting you the widest range of offers from over 21+ public, private sector banks and NBFCs - that too with a single application. you can also be assured of complete financial data security when you deal with us, thanks to our highly advanced digital systems that handle financial data with utmost safety and precision.</p>
 </div>
 <div class="col-md-5">
-  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+ <!--  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+  <div><img src="{{url_for('static',filename='images/loan-photo-1.jpg ')}}" class="img-thumbnail" alt="..."></div>
 </div>
 </div>
 
 <hr class="featurette-divider">
 
-<div class="row featurette">
+<div class="row featurette" style="margin-right:8%">
 <div class="col-md-7 order-md-2">
-  <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-  <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
+  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
+Mudra Loan upto ₹ 10 lakhs<span class="text-muted">.</span></h2>
+  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp; &nbsp;&nbsp;Planning to buy a new home or build a home of your dream on the land you own? or want to renovate your existing home and make it bigger and better? look no further if you are looking for funding. we at psb59 will help you find the best and the most affordable home loan offer for upto ₹10 crores and also get you the digital approval within 15 minutes. yes, it’s as simple as that.</p>
+<p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+&nbsp;&nbsp;&nbsp;&nbsp; An online loan facilitating platform like no other, psb59 offers you the convenience of choosing the home loan that’s best suited for you from 21+ private sector, public sector and NBFCs, with the help of a fully-digitised processing system that’s integrated to statutory bodies for various purposes like data fetching, authentication, etc.
+</p>
+
+<p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp; Put simply, we’ve reduced many days of efforts into just 15 minutes. you don’t have to visit multiple banks and fill up multiple applications to get the best home loan offer any more. all you need to do is - login, upload the required documents, add a co-applicant and apply - from anywhere, anytime. we’ll take care of the processing and obtain you digital approval within 15 minutes, subject to your borrowing credentials.
+</p>
+
+</p>
 </div>
 <div class="col-md-5 order-md-1">
-  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+  <div style="margin-left:19%">
+      <img src="{{url_for('static',filename='images/loan-photo-2.jpg')}}" class="img-thumbnail" alt="...">
+  </div>
 </div>
 </div>
 
 <hr class="featurette-divider">
 
-<div class="row featurette">
+<div class="row featurette" style="margin-left:7%;">
 <div class="col-md-7">
-  <h2 class="featurette-heading fw-normal lh-1">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-  <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
+Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
+  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+    &nbsp;&nbsp;&nbsp;&nbsp; Want to buy a car or a bike? or upgrade your existing vehicle? get digital approval for auto loans up to ₹1 crore within 15 minutes with psb59 loans. all you need to do is apply for an auto loan (car loan or bike loan) and we’ll help you get an instant approval*, thanks to our state-of-the-art digital systems that’s integrated with statutory bodies.
+</p><p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+&nbsp;&nbsp; &nbsp;&nbsp;We’ll also customise your requirement so that you can pick and choose from the wide range of vehicle loan offers from more than 25 financial institutions including public, private sector banks and NBFCs, with absolutely no hassles so that you save time, money and effort. and yes, psb59 is absolutely safe, secure and backed by 365 days online customer support.</p>
 </div>
 <div class="col-md-5">
-  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-
+  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+  <div>
+    <img src="{{url_for('static',filename='images/loan-photo-3.jpg')}}" class="img-thumbnail" alt="...">
+  </div>
 </div>
 </div>
+<hr class="featurette-divider">
+<br>
 
+  <div class="container">
+    <img src="{{url_for('static',filename='images/info.jpg')}}" class="img-fluid" alt="...">
+    
+  </div>
+<br>
 <hr class="featurette-divider">
 
 <!-- /END THE FEATURETTES -->
