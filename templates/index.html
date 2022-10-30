@@ -4,6 +4,7 @@
 {% block head %}
   <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/favicon.png')}}">
   <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
 {% endblock %}
 {% block bodycontent %}
 <header class="site-header sticky-top py-1">
@@ -23,7 +24,7 @@
 
 <main>
 <div style="width:100%">
-  <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+  <div id="carouselExampleDark" class="carousel slide carousel-fade" data-bs-ride="true">
 
   <div class="carousel-indicators">
 
@@ -37,7 +38,7 @@
       <img src="{{url_for('static',filename = 'images/carousel_img_1.png' )}}" class="d-block w-100" alt="..." style="width:100%;height:85vh">
       <div class="carousel-caption d-none d-md-block" style="margin-top:-12vh">
            
-            <h5 class="display-6">When money is need of the hour,
+            <h5 class="display-6" style="color:black">When money is need of the hour,
         We’ll help you get it, in less than an hour.</h5>
       </div>
     </div>
@@ -74,7 +75,7 @@
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container">
+  <div class="container-fluid px-1" style="padding:5%">
     <div class="row">
       <div class="col-lg-4 mb-4">
         <div class="card" style="width: 18rem;" style="display:table-cell">
@@ -173,7 +174,7 @@ Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
 <hr class="featurette-divider">
 <br>
 
-  <div class="container">
+  <div class="container-fluid" style="margin-left:8%">
     <img src="{{url_for('static',filename='images/info.jpg')}}" class="img-fluid" alt="...">
     
   </div>
@@ -193,5 +194,5 @@ Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
 </footer>
 </div>
 </main>
-
+<script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 {% endblock %}
