@@ -2,3 +2,14 @@
     border-top:none;
     box-shadow: 1ch;
 } 
+
+.row{
+    margin-left: 10%;
+}
+
+
+.lead{
+    color:#4c5f74;
+    font-weight:400;
+    font-size:20px;
+}
