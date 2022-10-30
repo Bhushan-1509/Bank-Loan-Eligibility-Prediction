@@ -1,6 +1,6 @@
 from flask import Flask,send_from_directory,render_template
 from flask import send_from_directory
-from flask_bootstrap import Bootstrap
+# from flask_bootstrap import Bootstrap
 import json
 import os
 
@@ -9,7 +9,7 @@ with open('config.json') as data_file:
 
 app = Flask(__name__, static_url_path='')
 
-bootstrap = Bootstrap(app)
+# bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
