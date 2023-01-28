@@ -1,50 +1,32 @@
-.card{
-    width:22vw;
-} 
-
-.card-body div{
-    text-align: center;
+.navbar{
+    display: flex;
+    padding:1vh 7vw;
+}
+.navbar a{
+    text-decoration: none;
 }
 
+.card img{
+   width: 18vw;
+   height:30vh;
+    
+} 
+.container{
+    display: flex;
+
+}
+
+.card{
+    border-top: none;
+    border-shadow : 2ch;
+} 
 
 .row{
-    display: flex;
-    margin:3vh 4vw;
+    margin-left: 8%;
 }
 
 .lead{
     color:#4c5f74;
     font-weight:400;
     font-size:20px;
-}
-
-.boxContainers{
-    display: flex;
-}
-
-.inner-boxcontainer{
-    display: flex;
-    flex-direction: column;
-    margin:auto 10vw;
-}
-
-.info{
-    background-color: #280071;
-    width: 100%;
-    
-}
-
-.info img{
-    display: block; 
-    margin:auto;
-}
-
-.sectiondiv{
-    display: flex;
-}
-.page-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }

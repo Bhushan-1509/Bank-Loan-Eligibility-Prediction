@@ -8,7 +8,7 @@
 {% endblock %}
 {% block bodycontent %}
 <header class="site-header sticky-top py-1">
-  <nav class="container d-flex flex-column flex-md-row justify-content-between">
+  <nav class="navbar">
     <a class="py-2" href="#" aria-label="Product">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
     </a>
@@ -70,43 +70,42 @@
 </div>
 
 <br>
-
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container-fluid px-1" style="display:flex">
-    <div class="row" class="boxContainers">
-      <div class="col-lg-4 mb-4" class="inner-boxcontainer">
-        <div class="card">
-          <img class="card-img-top" src="{{url_for('static',filename='images/personal-loan.jpg')}}" alt="..."> 
+  <div class="container-fluid px-1" style="padding:5%">
+    <div class="row">
+      <div class="col-lg-4 mb-4">
+        <div class="card" style="width: 18rem;" style="display:table-cell">
+          <img class="card-img-top" src="{{url_for('static',filename='images/personal-loan.jpg')}}" alt="..." height="280"> 
           <div class="card-body">
             <!-- First card -->
             <h5 class="card-title">Personal Loan</h5>
             <p class="card-text">Loans for medical emergency, your sibling’s wedding or funds to tackle COVID-19</p>
-            <div><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility</a></div>
+            <a href="/predict" class="btn btn-danger">Check Eligibility</a>
           </div>
         </div>
       </div>
       <!-- Second card -->
-      <div class="col-lg-4 mb-4" class="inner-boxcontainer">
-        <div class="card">
-          <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="...">
+      <div class="col-lg-4 mb-4">
+        <div class="card" style="width: 18rem;"  style="display:table-cell" >
+          <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="..." height="280">
           <div class="card-body">
             <h5 class="card-title">Educational Loan</h5>
             <p class="card-text">The stepping stone to your dreams, backed by a convenient financial plan</p>
-            <div><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a></div>
+            <a href="/predict" class="btn btn-danger">Check Eligibility<a>
           </div>
         </div>
       </div>
       <!-- Third card -->
-      <div class="col-lg-4 mb-4" class="inner-boxcontainer">
-        <div class="card">
-          <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="...">
+      <div class="col-lg-4 mb-4" style="display:table-cell;margin-left:67%;margin-top:-77vh">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="..." height="280">
           <div class="card-body">
             <h5 class="card-title">Other Loan</h5>
             <p class="card-text">No matter what the need, there’s a secure loan plan for you and meet your urgent need for cash </p>
-            <div><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a></div>
+            <a href="/predict" class="btn btn-danger">Check Eligibility<a>
           </div>
         </div>
       </div>
@@ -116,10 +115,9 @@
   
 <!-- START THE FEATURETTES -->
 
-<div id="page-content">
-  <hr class="featurette-divider" class="sectiondiv">
+<hr class="featurette-divider">
 
-<div class="row featurette">
+<div class="row featurette" style="margin-left:7%">
 <div class="col-md-7">
   <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">Personal Loan upto ₹ 20 Lakhs <span class="text-muted">.</span></h2>
   <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;If you are looking to meet your working capital requirements or take your business to newer heights, we’ll help you raise funds - by getting you an digital business loan approval in less than 59 minutes. a one-of-its-kind loan facilitating platform, psb59 makes the whole process of procuring MSME loans upto ₹5 crores easy, quick and convenient. what more? we’ll help you choose the best-suited, low-interest, flexible tenure MSME loan by getting you the widest range of offers from over 21+ public, private sector banks and NBFCs - that too with a single application. you can also be assured of complete financial data security when you deal with us, thanks to our highly advanced digital systems that handle financial data with utmost safety and precision.</p>
@@ -132,7 +130,7 @@
 
 <hr class="featurette-divider">
 
-<div class="row featurette" >
+<div class="row featurette" style="margin-right:8%">
 <div class="col-md-7 order-md-2">
   <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
 Mudra Loan upto ₹ 10 lakhs<span class="text-muted">.</span></h2>
@@ -147,13 +145,16 @@ Mudra Loan upto ₹ 10 lakhs<span class="text-muted">.</span></h2>
 </p>
 </div>
 <div class="col-md-5 order-md-1">
-    <img src="{{url_for('static',filename='images/loan-photo-2.jpg')}}" class="img-thumbnail" alt="...">
+  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+  <div style="margin-left:8%">
+      <img src="{{url_for('static',filename='images/loan-photo-2.jpg')}}" class="img-thumbnail" alt="...">
+  </div>
 </div>
 </div>
 
 <hr class="featurette-divider">
 
-<div class="row featurette">
+<div class="row featurette" style="margin-left:7%;">
 <div class="col-md-7">
   <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
 Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
@@ -172,15 +173,12 @@ Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
 <hr class="featurette-divider">
 <br>
 
-  <div class="container-fluid" class="info">
-    <div>
-      <img src="{{url_for('static',filename='images/info.jpg')}}" alt="...">
-    </div>
+  <div class="container-fluid" style="margin-left:8%">
+    <img src="{{url_for('static',filename='images/info.jpg')}}" class="img-fluid" alt="...">
     
   </div>
 <br>
 <hr class="featurette-divider">
-</div>
 
 <!-- /END THE FEATURETTES -->
 
@@ -188,10 +186,11 @@ Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
 
 
 <!-- FOOTER -->
-<div class="container">
-<footer class="container">
-  <p class="float-end"><a href="#">Back to top</a></p>
-  <p>&copy; 2022–2023 Bhushan Co-Operative Bank, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+<div class="footer-container">
+<footer class="footer">
+  <p style="display:inline">&copy; 2022–2023 Bhushan Co-Operative Bank, Inc. &middot;
+  <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+  <a href="#">Back to top</a></p>
 </footer>
 </div>
 </main>
