@@ -18,9 +18,12 @@
 
 .card{
     height:65vh;
-    width: 22vw;
+    width: 20vw;
     display: flex;
     margin:0% 2%;
+}
+.card:hover{
+    transform: scale(1.1);
 }
 
 .row{
