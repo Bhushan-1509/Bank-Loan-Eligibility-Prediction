@@ -74,116 +74,105 @@
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container-fluid px-1" style="padding:5%">
-    <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card" style="width: 18rem;" style="display:table-cell">
-          <img class="card-img-top" src="{{url_for('static',filename='images/personal-loan.jpg')}}" alt="..." height="280"> 
-          <div class="card-body">
-            <!-- First card -->
-            <h5 class="card-title">Personal Loan</h5>
-            <p class="card-text">Loans for medical emergency, your sibling’s wedding or funds to tackle COVID-19</p>
-            <a href="/predict" class="btn btn-danger">Check Eligibility</a>
-          </div>
+  <div class="card-deck">
+
+        <div class="card">
+        <img class="card-img-top" src="{{url_for('static',filename='images/mudra-loan.jpg')}}" alt="..."> 
+        <div class="card-body">
+          <!-- First card -->
+          <h5 class="card-title">Personal Loan</h5>
+          <p class="card-text">Loans for medical emergency, your sibling’s wedding or funds to tackle COVID-19</p>
+          <br>
+          <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility</a>
         </div>
-      </div>
-      <!-- Second card -->
-      <div class="col-lg-4 mb-4">
-        <div class="card" style="width: 18rem;"  style="display:table-cell" >
-          <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="..." height="280">
+    </div>
+   
+      <div class="card">
+          <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Educational Loan</h5>
             <p class="card-text">The stepping stone to your dreams, backed by a convenient financial plan</p>
-            <a href="/predict" class="btn btn-danger">Check Eligibility<a>
+            <br><br>
+              <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a>
           </div>
-        </div>
-      </div>
-      <!-- Third card -->
-      <div class="col-lg-4 mb-4" style="display:table-cell;margin-left:67%;margin-top:-77vh">
-        <div class="card" style="width: 18rem;">
-          <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="..." height="280">
+    </div>
+       <div class="card">
+          <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Other Loan</h5>
             <p class="card-text">No matter what the need, there’s a secure loan plan for you and meet your urgent need for cash </p>
-            <a href="/predict" class="btn btn-danger">Check Eligibility<a>
+              <br>
+              <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a>
           </div>
-        </div>
       </div>
-    </div></div>
- 
+  </div>
 
+
+  <div id="page-content">
+    <hr class="featurette-divider">
   
-<!-- START THE FEATURETTES -->
-
-<hr class="featurette-divider">
-
-<div class="row featurette" style="margin-left:7%">
-<div class="col-md-7">
-  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">Personal Loan upto ₹ 20 Lakhs <span class="text-muted">.</span></h2>
-  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;If you are looking to meet your working capital requirements or take your business to newer heights, we’ll help you raise funds - by getting you an digital business loan approval in less than 59 minutes. a one-of-its-kind loan facilitating platform, psb59 makes the whole process of procuring MSME loans upto ₹5 crores easy, quick and convenient. what more? we’ll help you choose the best-suited, low-interest, flexible tenure MSME loan by getting you the widest range of offers from over 21+ public, private sector banks and NBFCs - that too with a single application. you can also be assured of complete financial data security when you deal with us, thanks to our highly advanced digital systems that handle financial data with utmost safety and precision.</p>
-</div>
-<div class="col-md-5">
- <!--  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-  <div><img src="{{url_for('static',filename='images/loan-photo-1.jpg ')}}" class="img-thumbnail" alt="..."></div>
-</div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette" style="margin-right:8%">
-<div class="col-md-7 order-md-2">
-  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
-Mudra Loan upto ₹ 10 lakhs<span class="text-muted">.</span></h2>
-  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp; &nbsp;&nbsp;Planning to buy a new home or build a home of your dream on the land you own? or want to renovate your existing home and make it bigger and better? look no further if you are looking for funding. we at psb59 will help you find the best and the most affordable home loan offer for upto ₹10 crores and also get you the digital approval within 15 minutes. yes, it’s as simple as that.</p>
-<p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
-&nbsp;&nbsp;&nbsp;&nbsp; An online loan facilitating platform like no other, psb59 offers you the convenience of choosing the home loan that’s best suited for you from 21+ private sector, public sector and NBFCs, with the help of a fully-digitised processing system that’s integrated to statutory bodies for various purposes like data fetching, authentication, etc.
-</p>
-
-<p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp; Put simply, we’ve reduced many days of efforts into just 15 minutes. you don’t have to visit multiple banks and fill up multiple applications to get the best home loan offer any more. all you need to do is - login, upload the required documents, add a co-applicant and apply - from anywhere, anytime. we’ll take care of the processing and obtain you digital approval within 15 minutes, subject to your borrowing credentials.
-</p>
-
-</p>
-</div>
-<div class="col-md-5 order-md-1">
-  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-  <div style="margin-left:8%">
+  <div class="row featurette" id="content-row" style="text-align:center">
+  <div class="col-md-7" style="text-align:center">
+    <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">Personal Loan upto ₹ 20 Lakhs <span class="text-muted">.</span></h2>
+    <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;If you are looking to meet your working capital requirements or take your business to newer heights, we’ll help you raise funds - by getting you an digital business loan approval in less than 59 minutes. a one-of-its-kind loan facilitating platform, psb59 makes the whole process of procuring MSME loans upto ₹5 crores easy, quick and convenient. what more? we’ll help you choose the best-suited, low-interest, flexible tenure MSME loan by getting you the widest range of offers from over 21+ public, private sector banks and NBFCs - that too with a single application. you can also be assured of complete financial data security when you deal with us, thanks to our highly advanced digital systems that handle financial data with utmost safety and precision.</p>
+  </div>
+  <div class="col-md-5">
+   <!--  <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+    <div><img src="{{url_for('static',filename='images/loan-photo-1.jpg ')}}" class="img-thumbnail" alt="..."></div>
+  </div>
+  </div>
+  
+  <hr class="featurette-divider">
+  
+  <div class="row featurette"  style="text-align:center">
+  <div class="col-md-7 order-md-2"  style="text-align:center">
+    <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
+  Mudra Loan upto ₹ 10 lakhs<span class="text-muted">.</span></h2>
+    <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp; &nbsp;&nbsp;Planning to buy a new home or build a home of your dream on the land you own? or want to renovate your existing home and make it bigger and better? look no further if you are looking for funding. we at psb59 will help you find the best and the most affordable home loan offer for upto ₹10 crores and also get you the digital approval within 15 minutes. yes, it’s as simple as that.</p>
+  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+  &nbsp;&nbsp;&nbsp;&nbsp; An online loan facilitating platform like no other, psb59 offers you the convenience of choosing the home loan that’s best suited for you from 21+ private sector, public sector and NBFCs, with the help of a fully-digitised processing system that’s integrated to statutory bodies for various purposes like data fetching, authentication, etc.
+  </p>
+  
+  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp; Put simply, we’ve reduced many days of efforts into just 15 minutes. you don’t have to visit multiple banks and fill up multiple applications to get the best home loan offer any more. all you need to do is - login, upload the required documents, add a co-applicant and apply - from anywhere, anytime. we’ll take care of the processing and obtain you digital approval within 15 minutes, subject to your borrowing credentials.
+  </p>
+  
+  </p>
+  </div>
+  <div class="col-md-5 order-md-1">
       <img src="{{url_for('static',filename='images/loan-photo-2.jpg')}}" class="img-thumbnail" alt="...">
   </div>
-</div>
-</div>
-
-<hr class="featurette-divider">
-
-<div class="row featurette" style="margin-left:7%;">
-<div class="col-md-7">
-  <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
-Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
-  <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
-    &nbsp;&nbsp;&nbsp;&nbsp; Want to buy a car or a bike? or upgrade your existing vehicle? get digital approval for auto loans up to ₹1 crore within 15 minutes with psb59 loans. all you need to do is apply for an auto loan (car loan or bike loan) and we’ll help you get an instant approval*, thanks to our state-of-the-art digital systems that’s integrated with statutory bodies.
-</p><p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
-&nbsp;&nbsp; &nbsp;&nbsp;We’ll also customise your requirement so that you can pick and choose from the wide range of vehicle loan offers from more than 25 financial institutions including public, private sector banks and NBFCs, with absolutely no hassles so that you save time, money and effort. and yes, psb59 is absolutely safe, secure and backed by 365 days online customer support.</p>
-</div>
-<div class="col-md-5">
-  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
-  <div>
-    <img src="{{url_for('static',filename='images/loan-photo-3.jpg')}}" class="img-thumbnail" alt="...">
   </div>
-</div>
-</div>
-<hr class="featurette-divider">
-<br>
-
-  <div class="container-fluid" style="margin-left:8%">
-    <img src="{{url_for('static',filename='images/info.jpg')}}" class="img-fluid" alt="...">
-    
+  
+  <hr class="featurette-divider">
+  
+  <div class="row featurette"  style="text-align:center">
+  <div class="col-md-7"  style="">
+    <h2 class="display-5" style="font-family: Plus Jakarta,sans-serif;font-weight:bolder;font-size:36px;color:black;">
+  Auto Loan upto ₹ 1 Crore <span class="text-muted">.</span></h2>
+    <p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+      &nbsp;&nbsp;&nbsp;&nbsp; Want to buy a car or a bike? or upgrade your existing vehicle? get digital approval for auto loans up to ₹1 crore within 15 minutes with psb59 loans. all you need to do is apply for an auto loan (car loan or bike loan) and we’ll help you get an instant approval*, thanks to our state-of-the-art digital systems that’s integrated with statutory bodies.
+  </p><p class="lead" style="color:#4c5f74;font-weight:400;font-size:20px">
+  &nbsp;&nbsp; &nbsp;&nbsp;We’ll also customise your requirement so that you can pick and choose from the wide range of vehicle loan offers from more than 25 financial institutions including public, private sector banks and NBFCs, with absolutely no hassles so that you save time, money and effort. and yes, psb59 is absolutely safe, secure and backed by 365 days online customer support.</p>
   </div>
-<br>
-<hr class="featurette-divider">
-
-<!-- /END THE FEATURETTES -->
-
-</div><!-- /.container -->
-
+  <div class="col-md-5">
+    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg> -->
+    <div>
+      <img src="{{url_for('static',filename='images/loan-photo-3.jpg')}}" class="img-thumbnail" alt="...">
+    </div>
+  </div>
+  </div>
+  <hr class="featurette-divider">
+  <br>
+  
+    <div class="container-fluid" class="info">
+      <div>
+        <img src="{{url_for('static',filename='images/info.jpg')}}" alt="...">
+      </div>
+      
+    </div>
+  <br>
+  <hr class="featurette-divider">
+  </div>
 
 <!-- FOOTER -->
 <div class="footer-container">

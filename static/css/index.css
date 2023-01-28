@@ -17,16 +17,104 @@
 }
 
 .card{
-    border-top: none;
-    border-shadow : 2ch;
-} 
+    height:65vh;
+    width: 22vw;
+    display: flex;
+    margin:0% 2%;
+}
 
 .row{
-    margin-left: 8%;
+    display: flex;
+    /* padding:1vh 4vw; */
+    width: 100%;
+}
+
+.card-body div{
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    margin:auto 1vw;
+    width: 100%;
 }
 
 .lead{
     color:#4c5f74;
     font-weight:400;
     font-size:20px;
+}
+
+.boxContainers{
+    display: flex;
+}
+
+.inner-boxcontainer{
+    display: flex;
+    flex-direction: column;
+    margin:auto 10vw;
+}
+
+.container-fluid{
+    background-color: #291f75;
+    text-align: center;
+}
+.container-fluid
+
+.info img{
+    display: block; 
+    margin:auto;
+}
+
+.sectiondiv{
+    display: flex;
+}
+
+.footer{
+    color:white;
+    
+}
+.footer a{
+    color:white;
+}
+.footer-container{
+    display: flex;
+    height:8vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #291f75;
+}
+
+.card-deck{
+    display: flex;
+    padding:0% 4vw;
+    justify-content: center;
+}
+
+#adv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-row div{
+    display: flex;
+    padding:0% 4%;
+}
+
+
+.page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.page-content div[class="row featurette"] div{
+    text-align: center;
+    margin:0% 23%;
 }
