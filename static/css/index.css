@@ -1,16 +1,44 @@
-.card{
-    width:22vw;
+.navbar{
+    display: flex;
+    padding:1vh 7vw;
+}
+.navbar a{
+    text-decoration: none;
+}
+
+.card img{
+   width: 18vw;
+   height:30vh;
+    
 } 
+.container{
+    display: flex;
+
+}
+
+.card{
+    height:65vh;
+    width: 22vw;
+    display: flex;
+    margin:0% 2%;
+}
+
+.row{
+    display: flex;
+    /* padding:1vh 4vw; */
+    width: 100%;
+}
 
 .card-body div{
     text-align: center;
 }
 
-
-.row{
+.container{
     display: flex;
-    margin:3vh 4vw;
+    margin:auto 1vw;
+    width: 100%;
 }
+
 
 .lead{
     color:#4c5f74;
@@ -28,11 +56,11 @@
     margin:auto 10vw;
 }
 
-.info{
-    background-color: #280071;
-    width: 100%;
-    
+.container-fluid{
+    background-color: #291f75;
+    text-align: center;
 }
+.container-fluid
 
 .info img{
     display: block; 
@@ -45,6 +73,34 @@
 .page-content{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.footer{
+    color:white;
+    
+}
+.footer a{
+    color:white;
+}
+.footer-container{
+    display: flex;
+    height:8vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #291f75;
+}
+
+.card-deck{
+    display: flex;
+    margin:0% 12%;
+}
+
+#adv{
+    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
