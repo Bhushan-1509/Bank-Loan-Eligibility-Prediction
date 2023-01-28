@@ -103,3 +103,19 @@
     display: flex;
     padding:0% 4%;
 }
+
+
+.page-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    align-content: center;
+    
+}
+
+.page-content div[class="row featurette"] div{
+    text-align: center;
+    margin:0% 23%;
+}
