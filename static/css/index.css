@@ -1,15 +1,50 @@
 .card{
-    border-top: none;
-    border-shadow : 2ch;
+    width:22vw;
 } 
 
-.row{
-    margin-left: 8%;
+.card-body div{
+    text-align: center;
 }
 
+
+.row{
+    display: flex;
+    margin:3vh 4vw;
+}
 
 .lead{
     color:#4c5f74;
     font-weight:400;
     font-size:20px;
+}
+
+.boxContainers{
+    display: flex;
+}
+
+.inner-boxcontainer{
+    display: flex;
+    flex-direction: column;
+    margin:auto 10vw;
+}
+
+.info{
+    background-color: #280071;
+    width: 100%;
+    
+}
+
+.info img{
+    display: block; 
+    margin:auto;
+}
+
+.sectiondiv{
+    display: flex;
+}
+.page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
