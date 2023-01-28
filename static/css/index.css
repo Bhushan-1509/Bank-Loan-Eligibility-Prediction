@@ -70,13 +70,6 @@
 .sectiondiv{
     display: flex;
 }
-.page-content{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
 
 .footer{
     color:white;
@@ -95,7 +88,8 @@
 
 .card-deck{
     display: flex;
-    margin:0% 12%;
+    padding:0% 4vw;
+    justify-content: center;
 }
 
 #adv{
@@ -103,4 +97,9 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.content-row div{
+    display: flex;
+    padding:0% 4%;
 }
