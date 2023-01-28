@@ -1,3 +1,7 @@
+:root{
+    --box-shadow-color: rgba(226, 218, 238, 0.48);
+}
+
 .navbar{
     display: flex;
     padding:1vh 7vw;
@@ -21,9 +25,17 @@
     width: 20vw;
     display: flex;
     margin:0% 2%;
+    opacity: 0.9;
 }
 .card:hover{
-    transform: scale(1.1);
+    transform: scale(1.005);
+    opacity: 100%;
+    box-shadow: 0 24px 36px rgba(0,0,0,0.11),
+    0 24px 46px var(--box-shadow-color);
+}
+
+.card a:hover{
+    cursor: pointer;
 }
 
 .row{
@@ -82,7 +94,7 @@
 }
 .footer-container{
     display: flex;
-    height:8vh;
+    height:10vh;
     justify-content: center;
     align-items: center;
     background-color: #291f75;
@@ -121,3 +133,52 @@
     text-align: center;
     margin:0% 23%;
 }
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+      
+  }
+span[class="dot"]{
+    height: 25px;
+    width: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: green;
+    animation: loading 1s linear infinite;
+  }
+  /* Creating the loading animation*/
+  @keyframes loading {
+    0%{
+     transform: translateX(0);
+    }
+    25%{
+     transform: translateX(15px);
+    }
+    50%{
+     transform: translateX(-15px);
+    }
+    100%{
+     transform: translateX(0);
+    }
+      
+  }
+ span[class="dot"]:nth-child(1){
+   animation-delay: 0.1s;
+ }
+ span[class="dot"]:nth-child(2){
+   animation-delay: 0.2s;
+ }
+ span[class="dot"]:nth-child(3){
+   animation-delay: 0.3s;
+ }
+ span[class="dot"]:nth-child(4){
+   animation-delay: 0.4s;
+ }
+ span[class="dot"]:nth-child(5){
+   animation-delay: 0.5s;
+ }

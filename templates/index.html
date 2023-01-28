@@ -68,8 +68,13 @@
 </div>
 
 </div>
-
 <br>
+<div class="loader" style="display:none">
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
 <!-- Marketing messaging and featurettes
 ================================================== -->
 <!-- Wrap the rest of the page in another container to center all the content. -->
@@ -83,9 +88,9 @@
           <h5 class="card-title">Personal Loan</h5>
           <p class="card-text">Loans for medical emergency, your sibling’s wedding or funds to tackle COVID-19</p>
           <br>
-          <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility</a>
+          <div style="text-align:center"><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility</a></div>
         </div>
-    </div>
+      </div>
    
       <div class="card">
           <img class="card-img-top" src="{{url_for('static',filename='images/edu-loan.jpg')}}" class="card-img-top" alt="...">
@@ -93,16 +98,25 @@
             <h5 class="card-title">Educational Loan</h5>
             <p class="card-text">The stepping stone to your dreams, backed by a convenient financial plan</p>
             <br>
-              <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a>
+              <div style="text-align:center"><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a></div>
           </div>
-    </div>
+      </div>
        <div class="card">
           <img class="card-img-top" src="{{url_for('static',filename='images/other-loan.jpg')}}" class="card-img-top" alt="...">
           <div class="card-body">
             <h5 class="card-title">Other Loan</h5>
-            <p class="card-text">No matter what the need, there’s a secure loan plan for you and meet your urgent need for cash </p>
+            <p class="card-text">No matter what the need, there’s a secure loan plan for you</p>
               <br>
-              <a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a>
+          <div style="text-align:center"><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a></div>
+          </div>
+      </div>
+       <div class="card">
+          <img class="card-img-top" src="{{url_for('static',filename='images/Gold-Loan.jpg')}}" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Gold Loan</h5>
+            <p class="card-text">Avail the best interest rates for your gold, with ease</p>
+            <br><br>
+          <div style="text-align:center"><a href="/predict" class="btn btn-danger" target="_blank">Check Eligibility<a></div>
           </div>
       </div>
   </div>
@@ -183,5 +197,6 @@
 </footer>
 </div>
 </main>
+<script> src = "{{url_for('static',filename='js/index.js')}}"></script>
 <script src="https://getbootstrap.com/docs/5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 {% endblock %}
