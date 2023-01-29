@@ -3,6 +3,7 @@
 
 {% block head %}
   <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/favicon.png')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/predict.css')}}">
 {% endblock %}
 {% block bodycontent%}
 <body>
@@ -23,150 +24,155 @@
   </nav></header>
 </div><br><br><br><br><br>
   <!-- After navigation menu -->
+  <div>
   <div class="col-lg-4 col-md-4 col-sm-4 container justify-content-center">
     <div class="col">
       <h1 class="display-6">Loan Eligibility Prediction</h1>
     </div>
   </div>
-  <form action="" method="post">
-    <div class="container d-grid gap-3" style="margin-top:6vh;margin-left:12em">
-      <!-- Full Name -->
-      <div class="mb-3 row">
-        <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
-        <div class="col-lg-10">
-          <input type="text" class="form-control" id="full_name" style="width:60%">
-        </div>
-      </div>
-      <!-- Email -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
-        <div class="col-lg-10">
-          <input type="email" class="form-control" id="email" style="width:60%">
-        </div>
-      </div>
-      <!-- Gender -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Gender</label>
-        <div class="col-lg-10">
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-              Male
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-              Female  
-            </label>
+  <div class="formdiv">
+    <form action="" method="post" class="form">
+      <div class="container d-grid gap-3">
+        <!-- Full Name -->
+        <div class="mb-3 row">
+          <label for="fullname" class="col-sm-2 col-form-label">Full Name</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="full_name" style="width:60%">
           </div>
         </div>
-      </div>
-      <!-- Marital  Status -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Marital Status</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+        <!-- Email -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Email</label>
+          <div class="col-lg-10">
+            <input type="email" class="form-control" id="email" style="width:60%">
+          </div>
+        </div>
+        <!-- Gender -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Gender</label>
+          <div class="col-lg-10">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1">
+              <label class="form-check-label" for="flexRadioDefault1">
+                Male
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" checked>
+              <label class="form-check-label" for="flexRadioDefault2">
+                Female  
+              </label>
+            </div>
+          </div>
+        </div>
+        <!-- Marital  Status -->
+        <div class="mb-3 row" style="">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Marital Status</label>
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-            <div class="form-floating" style="width:72%">
-              <select class="form-select" id="floatingSelect" aria-label="Floating label select example" size="">
-                <option value="1">Unmarried</option>
-                <option value="2">Married</option>
+            <div class="col-lg-10">
+              <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+              <div class="form-floating" style="width:72%">
+                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" size="">
+                  <option value="1">Unmarried</option>
+                  <option value="2">Married</option>
+                </select>
+                <label for="floatingSelect">Marital Status</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- No of dependents -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">No of dependents</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputPassword">
+          </div>
+        </div>
+        <!-- Self employed or not  -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Self Employed</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+            </div>
+          </div>
+        </div>
+        <!-- Applicant Income -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Applicant Income</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div style="background-color:f8d89f;">
+              <label for="customRange2" class="form-label" id="applicant-income-label">₹0</label>
+            </div>
+            <input type="range" class="form-range" min="0" max="81000" id="applicant-income">
+          </div>
+        </div>
+        <!-- Co-Applicant Income -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Co-Applicant Income</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div>
+              <label for="customRange2" class="form-label" id="coapplicant-income-label">₹0</label>
+            </div>
+            <input type="range" class="form-range" min="0" max="81000" id="coapplicant-income" style="width:60%">
+          </div>
+        </div>
+        <!-- Loan Amount -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Loan Amount</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div style="background-color:f8d89f;">
+              <label for="customRange2" class="form-label" id="loan-amount-label">₹0</label>
+            </div>
+            <input type="range" class="form-range" min="0" max="81000" id="loan-amount">
+          </div>
+        </div>
+        <!-- Credit History -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Credit History</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+            
+                <option value="1">1</option>
+                <option value="0">0</option>
+              
               </select>
-              <label for="floatingSelect">Marital Status</label>
+              <label for="floatingSelect">Credit History</label>
+            </div>
+          </div>
+        </div>
+        <!-- Property Area -->
+        <div class="mb-3 row">
+          <label for="inputPassword" class="col-sm-2 col-form-label">Property Area</label>
+          <div class="col-lg-10">
+            <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
+            <div class="form-floating">
+              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option selected>Open this select menu</option>
+                <option value="urban">Urban</option>
+                <option value="rural">Rual</option>
+                <option value="semi-urban">Semi-Urban</option>
+              </select>
+              <label for="floatingSelect">Property Type</label>
             </div>
           </div>
         </div>
       </div>
-      <!-- No of dependents -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">No of dependents</label>
-        <div class="col-lg-10">
-          <input type="text" class="form-control" id="inputPassword" style="width:60%">
-        </div>
+      <!-- Predict button -->
+      <div>
+        <button type="button" class="btn btn-danger">Predict</button>
       </div>
-      <!-- Self employed or not  -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Self Employed</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" style="width:5%;height:4vh">
-          </div>
-        </div>
-      </div>
-      <!-- Applicant Income -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Applicant Income</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div style="background-color:f8d89f;">
-            <label for="customRange2" class="form-label" id="applicant-income-label">₹0</label>
-          </div>
-          <input type="range" class="form-range" min="0" max="81000" id="applicant-income" style="width:60%">
-        </div>
-      </div>
-      <!-- Co-Applicant Income -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Co-Applicant Income</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div style="background-color:f8d89f;">
-            <label for="customRange2" class="form-label" id="coapplicant-income-label">₹0</label>
-          </div>
-          <input type="range" class="form-range" min="0" max="81000" id="coapplicant-income" style="width:60%">
-        </div>
-      </div>
-      <!-- Loan Amount -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Loan Amount</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div style="background-color:f8d89f;">
-            <label for="customRange2" class="form-label" id="loan-amount-label">₹0</label>
-          </div>
-          <input type="range" class="form-range" min="0" max="81000" id="loan-amount" style="width:60%">
-        </div>
-      </div>
-      <!-- Credit History -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Credit History</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div class="form-floating" style="width:60%">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-          
-              <option value="1">1</option>
-              <option value="0">0</option>
-            
-            </select>
-            <label for="floatingSelect">Credit History</label>
-          </div>
-        </div>
-      </div>
-      <!-- Property Area -->
-      <div class="mb-3 row">
-        <label for="inputPassword" class="col-sm-2 col-form-label">Property Area</label>
-        <div class="col-lg-10">
-          <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
-          <div class="form-floating" style="width:60%">
-            <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-              <option selected>Open this select menu</option>
-              <option value="urban">Urban</option>
-              <option value="rural">Rual</option>
-              <option value="semi-urban">Semi-Urban</option>
-            </select>
-            <label for="floatingSelect">Property Type</label>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Predict button -->
-    <div style="margin-left:45%">
-      <button type="button" class="btn btn-danger" style="width:20%">Predict</button>
-    </div>
-  </form><br>
+    </form>
+  </div>
+</div>
+  <br>
  <!-- footer  -->
 <hr>
   <div class="container" style="background-color:#280071;height:12vh;">

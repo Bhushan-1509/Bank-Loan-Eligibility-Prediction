@@ -1,8 +1,25 @@
 #nav-menu{
     width: 100%;
     height:9vh;
-    background-color: #ae275f;
+    /* background-color: #ae275f; */
+    animation-name: navbar-load;
+    animation-duration: 1.5s;
+    animation-delay: 400ms;
+    animation-timing-function:linear;
 }
+
+@keyframes navbar-load {
+  0%{
+      opacity: 0.1;
+      transform: translateY(-50%);
+  }
+  100%{
+      opacity: 0.9;
+      transform: translateY(0);
+  }
+}
+
+
 #logout{
     margin-left:95%;
   
@@ -40,3 +57,31 @@
   }
 
  
+  .formdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    animation-name: form-load;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay:400ms;
+  }
+  .formdiv input[type="text"]{
+    width:60%;
+  }
+  .formdiv select{
+    width:60%;
+  }
+  .formdiv input[type="text"]{
+    width:60%;
+  }
+
+  @keyframes form-load {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
