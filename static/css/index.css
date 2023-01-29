@@ -5,7 +5,24 @@
 .navbar{
     display: flex;
     padding:1vh 7vw;
+    animation-name: navbar-load;
+    animation-duration: 1.5s;
+    animation-delay: 400ms;
+    animation-timing-function:linear;
+
 }
+
+@keyframes navbar-load {
+    0%{
+        opacity: 0.1;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
 .navbar a{
     text-decoration: none;
 }
@@ -20,12 +37,43 @@
 
 }
 
+#carouselExampleDark{
+    animation-name:carousel-load;
+    animation-duration : 2s;
+    animation-delay: 400ms;
+
+}
+
+
+@keyframes carousel-load {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
 .card{
-    height:65vh;
-    width: 20vw;
+    height:63vh;
+    width: 24vw;
     display: flex;
     margin:0% 2%;
     opacity: 0.9;
+    animation-name: card-loading;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-timing-function: ease-in-out;
+}
+@keyframes card-loading {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
 }
 .card:hover{
     transform: scale(1.005);
@@ -59,6 +107,22 @@
     font-weight:400;
     font-size:20px;
 }
+
+#page-content{
+    animation-name: content-load;
+    animation-duration: 2s;
+    animation-delay: 400ms;
+    animation-timing-function: ease-in-out;
+}
+@keyframes content-load {
+    0%{ 
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
 
 .boxContainers{
     display: flex;
@@ -134,51 +198,5 @@
     margin:0% 23%;
 }
 
-.loader{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    align-items: center;
-      
-  }
-span[class="dot"]{
-    height: 25px;
-    width: 25px;
-    margin-right: 10px;
-    border-radius: 50%;
-    background-color: green;
-    animation: loading 1s linear infinite;
-  }
-  /* Creating the loading animation*/
-  @keyframes loading {
-    0%{
-     transform: translateX(0);
-    }
-    25%{
-     transform: translateX(15px);
-    }
-    50%{
-     transform: translateX(-15px);
-    }
-    100%{
-     transform: translateX(0);
-    }
-      
-  }
- span[class="dot"]:nth-child(1){
-   animation-delay: 0.1s;
- }
- span[class="dot"]:nth-child(2){
-   animation-delay: 0.2s;
- }
- span[class="dot"]:nth-child(3){
-   animation-delay: 0.3s;
- }
- span[class="dot"]:nth-child(4){
-   animation-delay: 0.4s;
- }
- span[class="dot"]:nth-child(5){
-   animation-delay: 0.5s;
- }
+
+ 
