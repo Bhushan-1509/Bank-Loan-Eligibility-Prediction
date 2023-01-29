@@ -1,6 +1,10 @@
+/* Variables to be used in style sheets ! */
+
 :root{
     --box-shadow-color: rgba(226, 218, 238, 0.48);
 }
+
+/* Navigation bar styling and animation */
 
 .navbar{
     display: flex;
@@ -27,16 +31,13 @@
     text-decoration: none;
 }
 
-.card img{
-   width: 18vw;
-   height:30vh;
-    
-} 
+
 .container{
     display: flex;
 
 }
 
+/* Carousel styling and animation */
 #carouselExampleDark{
     animation-name:carousel-load;
     animation-duration : 2s;
@@ -54,7 +55,12 @@
     }
 }
 
-
+/* Cards styling and animation */
+.card img{
+    width: 18vw;
+    height:30vh;
+     
+ } 
 
 .card{
     height:63vh;
@@ -107,7 +113,7 @@
     font-weight:400;
     font-size:20px;
 }
-
+/* Page content animation */
 #page-content{
     animation-name: content-load;
     animation-duration: 2s;
@@ -148,7 +154,7 @@
 .sectiondiv{
     display: flex;
 }
-
+/* Footer styling and animation  */
 .footer{
     color:white;
     
