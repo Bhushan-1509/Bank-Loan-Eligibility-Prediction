@@ -1,0 +1,98 @@
+
+.main{
+    display: flex;
+}
+
+.navbar{
+    height:12vh;
+    animation-name: navbar-load;
+    animation-duration: 1.5s;
+    animation-delay: 400ms;
+    animation-timing-function:linear;
+}
+
+@keyframes navbar-load {
+    0%{
+        opacity: 0.1;
+        transform: translateY(-50%);
+    }
+    100%{
+        opacity: 0.9;
+        transform: translateY(0);
+    }
+}
+
+
+.formdiv{
+    display: flex;
+    flex-direction: column;
+    width:50vw;
+    justify-content: center;
+    margin: 7vh 13.2vw;
+    /* padding:2vh 0; */
+    animation-name: form-load;
+    animation-duration: 1.5s;
+    animation-delay: 300ms;
+    animation-timing-function:linear;
+    background-color: #fff;
+
+}
+
+@keyframes form-load {
+    0%{
+        opacity: 0.1;
+        /* transform: translateY(-50%); */
+    }
+    100%{
+        opacity: 0.9;
+        /* transform: translateY(0); */
+    }
+}
+
+
+.formdiv div input[type="text"]{
+    width:100%;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+button[type="submit"]{
+    width:100%;
+}
+
+.pageImg{
+    /* background-color: blueviolet; */
+    width:70%;
+    height:70vh;
+    animation-name: img-load;
+    animation-duration: 1.5s;
+    animation-delay: 300ms;
+    animation-timing-function:linear;
+
+}
+
+@keyframes img-load {
+    0%{
+        opacity: 0.1;
+        /* transform: translateY(-50%); */
+    }
+    100%{
+        opacity: 0.9;
+        /* transform: translateY(0); */
+    }
+}
+
+.card{
+    text-align: center;
+}
+
+p[class="card-text"]{
+    font-family: Poppins,sans-serif;
+    font-weight: 500;
+    color:#9198a9;
+    line-height: 21px;
+    font-size:17px;
+}

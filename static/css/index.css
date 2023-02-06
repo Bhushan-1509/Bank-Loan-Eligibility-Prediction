@@ -5,8 +5,18 @@
 }
 
 /* Navigation bar styling and animation */
+header{
+    width:100vw;
+}
+
+
+.btnStyle{
+    background-color: #d82371;
+    color:white;
+}
 
 .navbar{
+    width: 100vw;
     display: flex;
     padding:1vh 7vw;
     animation-name: navbar-load;
