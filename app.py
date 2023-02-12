@@ -27,6 +27,27 @@ def signin():
 def signup():
     return render_template("sign-up.html")
 
+@app.route('/about-us')
+def aboutus():
+    return render_template("about-us.html")
+
+@app.route('/business')
+def business():
+    return render_template("business.html")
+
+@app.route('/features')
+def features():
+    return render_template("features.html")
+
+@app.route('/news')
+def news():
+    return render_template("news.html")
+@app.route('/support')
+def support():
+    return render_template("support.html")
+
+
+
 
 
 if __name__ == '__main__':

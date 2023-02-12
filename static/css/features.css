@@ -1,0 +1,86 @@
+body {
+    background-color: #f3f3f3;
+    background-image: url(https://www.nestegg.com.au/images/InvestmentHouse.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 100px 100px;
+  }
+  
+  #features {
+    /* padding: 0px 0; */
+    text-align: center;
+  }
+  
+  #features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #f1f1f1;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .feature-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .feature-box {
+    width: calc(33.33% - 20px);
+    padding: 40px;
+    background-color: #f3e6f6;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 40px;
+  }
+  
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  }
+  
+  .feature-box i {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #3498db;
+  }
+  
+  .feature-box h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #252424;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  .feature-box p {
+    font-size: 16px;
+    color: #3a3939;
+    line-height: 1.5;
+    margin-bottom: 0;
+  }
+  
+  @media (max-width: 992px) {
+    .feature-box {
+      width: calc(50% - 20px);
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .feature-box {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+  }
+  footer{
+    background: #0f247a;
+    padding: 20px;
+  }
+  footer p{
+      text-align: center;
+      color: #fff;
+  }  
