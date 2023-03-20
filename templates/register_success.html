@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block title %}Loan  eligibility prediction{% endblock %}
+{% block head %}
+  <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/favicon.png')}}">
+  <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+  <style>
+        .btn{
+            width:15%;
+
+        }
+  </style>
+{% endblock %}
+
+{% block bodycontent%}
+
+{% if hasAccount == True %}
+    <div class="alert alert-danger" role="alert">
+        <h4 class="alert-heading">Account Already Exists !</h4>
+        <p>You can go to login page and login into your account from there </p>
+        <hr>
+    </div>
+    <div class="container" >
+        <a class="btn btn-primary" href="/sign-in">Login</a>
+    </div>     
+{% else %}
+    <div class="alert alert-success" role="alert">
+        <h4 class="alert-heading">Well done!</h4>
+        <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
+        <hr>
+        <p class="mb-0">You have successfully created account</p>
+    </div>
+    <div class="container">
+        <a class="btn btn-primary" href="/sign-in">Login</a>
+    </div>     
+{% endif %}
+{%endblock%}
