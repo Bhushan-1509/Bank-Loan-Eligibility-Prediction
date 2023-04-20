@@ -1,0 +1,107 @@
+{% extends "base.html" %}
+
+{% block title %}Loan Status Predictor{% endblock %}
+
+{% block css_links %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename = 'css/loan.css')}}">
+
+{% if status_predicted %}
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Status", "Probability", { role: "style" } ],
+        ["Approved", {{ predict_proba[0][1] }}, "#00ff00"],
+        ["Rejected", {{ predict_proba[0][0] }}, "#ff0000"]
+
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Loan Status",
+        height: 450,
+        bar: {groupWidth: "80%"},
+        legend: { position: "none" }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+  }
+  </script>
+
+{% endif %}
+
+{% endblock %}
+{% block content %}
+
+<div class="container">
+	<div class="space"></div>
+	<h2 class="text-center">Loan Status Prediction</h2>
+	<div class="space"></div>
+		<div class="col-md-6">
+			{% if status_predicted %}
+			<div class="card">
+				<div class="card-body">
+				<div id="columnchart_values" style="width: 100%;"></div>					
+				</div>
+			</div>
+			{% endif %}
+		</div>
+	</div>
+	<div class="space"></div>
+	<div class="space"></div>
+
+
+	<!-- Loan Status Modal -->
+	{% if status_predicted %}
+	<div class="modal fade" id="loanStatus" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Loan Status</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	      	{% if status_predicted == 'Y' %}
+	      		<div class="text-center congrats">Congratulations!!!</div>
+	      		<div class="text-center status">Your loan was approved</div>
+	      	{% else %}
+	      		<div class="text-center rejects">Oops!!! Sorry</div>
+	      		<div class="text-center status">Your loan was rejected</div>
+	      	{% endif %}
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	{% endif %}
+
+
+
+
+</div>
+
+
+{% endblock %}
+
+
+
+{% block js_scripts %}
+	<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#loanStatus').modal('show');
+    });
+</script>
+{% endblock %}

@@ -8,6 +8,7 @@ import json
 import os
 import hashlib
 import bcrypt
+import pickle
 
 with open('config.json') as data_file:
     config = json.load(data_file)
@@ -34,6 +35,32 @@ def index():
 @app.route('/predict')
 def predict():
     return render_template("predict.html")
+
+@app.route("/loan-status-prediction",methods=["POST"])
+def loan_status_predictor():
+    if request.method == "POST":
+        # credit_history = None
+        credit_history = float(request.form.get('credit_history'))
+        loan_amount = float(request.form.get('loan_amount').split("₹")[1])
+        applicant_income = float(request.form.get('applicant_income').split("₹")[1])
+        coapplicant_income = float(request.form.get('coapplicant_income').split("₹")[1])
+        dependents = float(request.form.get('dependents'))
+
+		# Forming an input array
+        input_array = [[credit_history, loan_amount, applicant_income, coapplicant_income, dependents]]
+
+		# Loading Loan Status Predictor Model
+        loan_status_predictor_model = pickle.load(open('model.pkl', 'rb'))
+
+		# Prediction
+        status_predicted = loan_status_predictor_model.predict(input_array)
+
+		# Predicting Probability
+        predict_proba = loan_status_predictor_model.predict_proba(input_array) * 100
+        return render_template('loan_status_predictor.html',
+                	        status_predicted = status_predicted,
+                	        predict_proba = predict_proba)
+
 
 @app.route('/sign-in')
 def signin():
