@@ -31,7 +31,7 @@
     </div>
   </div>
   <div class="formdiv">
-    <form action="" method="post" class="form">
+    <form action="/loan-status-prediction" method="post" class="form">
       <div class="container d-grid gap-3">
         <!-- Full Name -->
         <div class="mb-3 row">
@@ -86,7 +86,7 @@
         <div class="mb-3 row">
           <label for="inputPassword" class="col-sm-2 col-form-label">No of dependents</label>
           <div class="col-lg-10">
-            <input type="text" class="form-control" id="inputPassword">
+            <input name="dependents" type="text" class="form-control" id="inputPassword">
           </div>
         </div>
         <!-- Self employed or not  -->
@@ -95,7 +95,7 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div class="form-check form-switch">
-              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <input name="self_employed" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
             </div>
           </div>
         </div>
@@ -105,9 +105,11 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div style="background-color:f8d89f;">
-              <label for="customRange2" class="form-label" id="applicant-income-label">₹0</label>
+              <!-- <label for="customRange2" class="form-label" id="applicant-income-label">₹0</label> -->
+              <input type="text" name="applicant_income" id="app-income" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" style="width:20vw;">
             </div>
-            <input type="range" class="form-range" min="0" max="81000" id="applicant-income">
+            <br><br>
+            <input type="range" class="form-range" min="0" max="81000" id="applicant-income" style="width:40vw;">
           </div>
         </div>
         <!-- Co-Applicant Income -->
@@ -116,9 +118,11 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div>
-              <label for="customRange2" class="form-label" id="coapplicant-income-label">₹0</label>
+              <!-- <label for="customRange2" class="form-label" id="coapplicant-income-label">₹</label> -->
+              <input type="text" name="coapplicant_income" id="coapp-income" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" style="width:20vw;">
             </div>
-            <input type="range" class="form-range" min="0" max="81000" id="coapplicant-income" style="width:60%">
+            <br><br>
+            <input type="range" class="form-range" min="0" max="81000" id="coapplicant-income" style="width:40vw;">
           </div>
         </div>
         <!-- Loan Amount -->
@@ -127,9 +131,11 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div style="background-color:f8d89f;">
-              <label for="customRange2" class="form-label" id="loan-amount-label">₹0</label>
+             <!-- <label for="customRange2" class="form-label" id="loan-amount-label">₹0</label> -->
+              <input type="text" name="loan_amount" id="loan-amt" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm" style="width:20vw;">
             </div>
-            <input type="range" class="form-range" min="0" max="81000" id="loan-amount">
+            <br><br>
+            <input type="range" class="form-range" min="0" max="81000" id="loan-amount" style="width:40vw;">
           </div>
         </div>
         <!-- Credit History -->
@@ -138,10 +144,10 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div class="form-floating">
-              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+              <select name="credit_history" class="form-select" id="floatingSelect" aria-label="Floating label select example">
             
-                <option value="1">1</option>
-                <option value="0">0</option>
+                <option value=1>Yes</option>
+                <option value=0>No</option>
               
               </select>
               <label for="floatingSelect">Credit History</label>
@@ -155,8 +161,7 @@
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div class="form-floating">
               <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                <option selected>Open this select menu</option>
-                <option value="urban">Urban</option>
+                <option value="urban" selected>Urban</option>
                 <option value="rural">Rual</option>
                 <option value="semi-urban">Semi-Urban</option>
               </select>
@@ -166,8 +171,9 @@
         </div>
       </div>
       <!-- Predict button -->
-      <div>
-        <button type="button" class="btn btn-danger">Predict</button>
+      <br><br>
+      <div class="container" style="text-align:center">
+        <input type="submit" class="btn btn-danger" style="width:18vw;"></button>
       </div>
     </form>
   </div>

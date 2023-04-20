@@ -8,71 +8,102 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--title-->
     <title>About Us </title>
-    
-    <!--google fonts(the fonts that we are going to use in this tutorial: raleways and  open sans)-->
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700&display=swap" rel="stylesheet">
-     <!--Link for open sans font type and its values-->  
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap" rel="stylesheet">
-     
-    <!--Linking fontawesome file with html-->
-    <link rel="stylesheet" href="{{url_for('static',filename='fontawesome/css/fontawesome.min.css')}}">
+
 
     <!--Linking bootstrap file to html-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--Linking the css file to html-->
     <link rel="stylesheet" href="{{url_for('static',filename='css/about-us.css')}}">
     <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/favicon.png')}}">
+    <style>
+      .card{
+        margin-left:2%;
+        margin-right:1.6%;
+      }
+
+      .card-img-top{
+        width: 100%;
+        height: 40vh;
+        object-fit: cover;
+      }
+    </style>
 </head>
 <body>
+  
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Business<a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">Support</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{url_for('static',filename='images/about-us-bg.jpg')}}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="text-align:right">
+          <p class="display-6">Banking For All
+            Aao Sochein Bada
+            Bank Aisa Dost Jaisa</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br><br>
+  <div class="row" style="">
+  <div class="card" style="width: 25.5rem;">
+    <img src="{{url_for('static',filename='images/overview-img.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Overview</h5>
+      <p class="card-text">Bhushan Co-Operative Bank
+        is one of India’s leading private banks and has received approval from the
+        Reserve Bank of India (RBI) to set up a private sector bank in 2020. It has been a
+        long and eventful journey of more than a century across 17 countries.
+        We are prominent work force in
+        Retail Banking, Wholesale Banking, Treasury, Mutual funds and many more.</p>
+        <br>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
 
- <section id="ABOUT">
-     <div class="about-1">
-         <h6 class='display-4' style="text-align:center">About Us</h6>
-         <P><b>Happy to be India’s International Bank</b></P>
-         <p><b>OUR MISSION IS : </b> To be a top ranking National Bank of International Standards
-            committed to augmenting stake holders’ value through concern,
-            care and competence.</p>
-     </div>
-     <div id="about-2">
-     <div class="content-box-lg">
-         <div class="container">
-             <div class="row">
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                     <i class="fa fa-book"></i>
-                     <h3><b>OVERVIEW</b></h3>
-                     <hr>
-                     <p> Bhushan Co-Operative Bank <br>is one of India’s leading private banks and has received approval from the <br>Reserve Bank of India (RBI) to set up a private sector bank in 2020. It has been a <br>long and eventful journey of more than a century across 17 countries.
-                     <br>We are prominent work force in <br>Retail Banking, Wholesale Banking, Treasury, Mutual funds and many more.</p>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                     <i class="fa fa-pencil"></i>
-                     <h3><b>INVESTOR RELATION</b></h3>
-                     <hr>
-                     <p><b>Bhushan Co-operative Bank</b> was one of the early movers in Public Sector Banks to have tapped the equity market in December 2001. The Bank has also issued equity shares to the Government of India on Preferential Basis in Mar. 2011, Mar. 2013, Jan. 2014, Apr. 2015, June 2015, May 2018, June 2019 and December 2019 besides to LIC of India in March 2012, pursuant to SEBI Regulations, 2009, as amended. </p>
-                     </div>
-                 </div>
-                 <div class="col-md-4">
-                    <div class="about-item text-center">
-                     <i class="fa fa-globe"></i>
-                     <h3><b>HISTORY</b></h3>
-                     <hr>
-                     <p><B> A Great Future is built on a Glorious Past.</B></p>
-                     <h4>BHUSHAN MAHAJAN III</h4>
-                     <p>The founder of Bank of Baroda
-                     <br>The bank was founded by Bhushan Mahajan on
-                        20 July 2015. The bank, along with many other major commercial banks of India, was
-                        nationalised on 19 July 2020, by the Government of India and has been designated as a
-                        profit-making PSU.</p>
-                     </div>
-                  </div>
-              </div>
-            </div>
-         </div>
-      </div>   
- </section>
+  <div class="card" style="width: 25.5rem;">
+    <img src="{{url_for('static',filename='images/investors-relation-img.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Investor Relation</h5>
+      <p class="card-text">Bhushan Co-operative Bank was one of the early movers in Public Sector Banks to have tapped the equity market in December 2001. The Bank has also issued equity shares to the Government of India on Preferential Basis in Mar. 2011, Mar. 2013, Jan. 2014, Apr. 2015, June 2015, May 2018, June 2019 and December 2019 besides to LIC of India in March 2012, pursuant to SEBI Regulations, 2009, as amended.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+  <div class="card" style="width:25.5rem;">
+    <img src="{{url_for('static',filename='images/history-img.jpg')}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">History</h5>
+      <p class="card-text">BHUSHAN MAHAJAN III
+        The founder of Bank of Baroda
+        The bank was founded by Bhushan Mahajan on 20 July 2015. The bank, along with many other major commercial banks of India, was nationalised on 19 July 2020, by the Government of India and has been designated as a profit-making PSU.</p>
+        <br><br>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>
     
 <!--our footer -->
  
@@ -80,6 +111,7 @@
     <p>&copy; 2022–2023 Bhushan Co-Operative Bank, Inc. </p>
     
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
 
