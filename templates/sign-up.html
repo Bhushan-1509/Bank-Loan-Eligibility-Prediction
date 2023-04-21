@@ -15,15 +15,16 @@
 </nav>
 <div class="main">
   <div class="formdiv">
-  <form action = "/register" method="POST">
+  {% include "alert.html" %}
+  <form action = "{{ url_for('register') }}" method="POST">
       <div class="mb-3">
         <label for="" class="form-label">First Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='firstName' required>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='firstName' pattern="[a-zA-Z]+" required>
         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
       </div>
       <div class="mb-3">
         <label for="" class="form-label">Last Name</label>
-        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='lastName' required>
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name='lastName' pattern="[a-zA-Z]+" required>
         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
       </div>
       <div class="mb-3">

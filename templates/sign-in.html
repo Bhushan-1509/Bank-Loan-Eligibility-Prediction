@@ -12,9 +12,7 @@
     </a>
   </div>
 </nav>
-    <div class="alert alert-warning" role="alert" style="text-align:center">
-      {{msg}}
-    </div>
+{% include "alert.html" %}
       <div class="main">
         <div class="formdiv">
           <form action = "{{ url_for('login') }}" method="POST">

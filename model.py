@@ -1,6 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier  
 import pickle
 
 
@@ -10,13 +11,6 @@ def LoanAmount_null_values_filler(df):
     for row in range(df.shape[0]):
         if pd.isnull(df.loc[row, 'LoanAmount']):
             if df.loc[row, 'Loan_Status'] == 'Y':
-                df.loc[row, 'LoanAmount'] = 151.22
-            elif df.loc[row, 'Loan_Status'] == 'N':
-                df.loc[row, 'LoanAmount'] = 144.29
-            else:
-                pass
-        if pd.isnull(df.loc[row, 'Self_Employed']):
-            if df.loc[row, 'Self_employed'] == 'Y':
                 df.loc[row, 'LoanAmount'] = 151.22
             elif df.loc[row, 'Loan_Status'] == 'N':
                 df.loc[row, 'LoanAmount'] = 144.29
@@ -35,8 +29,8 @@ def dependents_null_value_filler(df):
 train_data = pd.read_csv('data.csv')
 
 # Initialzing Prediction features
-# prediction_features = ['Credit_History', 'LoanAmount', 'ApplicantIncome', 'CoapplicantIncome', 'Dependents', 'Loan_Status', 'Married']
-prediction_features = ['Credit_History', 'LoanAmount', 'ApplicantIncome', 'CoapplicantIncome','Self_Employed' 'Dependents', 'Self_Employed', 'Married']
+prediction_features = ['Credit_History', 'LoanAmount', 'ApplicantIncome', 'CoapplicantIncome', 'Dependents', 'Loan_Status', 'Married']
+# prediction_features = ['Credit_History', 'LoanAmount', 'ApplicantIncome', 'CoapplicantIncome','Self_Employed' 'Dependents', 'Self_Employed', 'Married']
 
 # Extracting prediction data from the whole data
 train_data = train_data.loc[:, prediction_features]
@@ -68,7 +62,12 @@ prediction_values = train_data['Loan_Status'].values
 
 # Creating Decision Tree Classifier Model
 decision_tree_model = DecisionTreeClassifier(max_depth = 8)
+
 decision_tree_model.fit(feature_values, prediction_values)
 
+random_forest_model = RandomForestClassifier(n_estimators= 10, criterion="entropy")
+
+
+# classifier.fit(x_train, y_train)  
 # Dumping Model to a pickle file
 pickle.dump(decision_tree_model, open("model.pkl", "wb"))

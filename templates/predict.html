@@ -14,12 +14,12 @@
     <a class="py-2" href="#" aria-label="Product">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img" viewBox="0 0 24 24"><title>Product</title><circle cx="12" cy="12" r="10"/><path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/></svg>
     </a>
-    <a class="py-2 d-none d-md-inline-block" href="#">About Us</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Digital Products</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Other Services</a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Account Info</a>
-    <a class="py-2 d-none d-md-inline-block" href="#"></a>
-    <button type="button" class="btn btn-danger" style="height:17%">Sign Out</button>
+    <a class="py-2 d-none d-md-inline-block" href="{{url_for('aboutus')}}" target="_blank">About Us</a>
+    <a class="py-2 d-none d-md-inline-block" href="{{url_for('aboutus')}}" target="_blank">Digital Products</a>
+    <a class="py-2 d-none d-md-inline-block" href="{{url_for('aboutus')}}" target="_blank">Other Services</a>
+    <a class="py-2 d-none d-md-inline-block" href="{{url_for('aboutus')}}" target="_blank">Account Info</a>
+    <a class="py-2 d-none d-md-inline-block" href="{{url_for('aboutus')}}" target="_blank"></a>
+    <a type="button" class="btn btn-danger" style="height:17%" href="{{url_for('logout')}}">Sign Out</a>
     
   </nav></header>
 </div><br><br><br><br><br>
@@ -52,13 +52,13 @@
           <label for="inputPassword" class="col-sm-2 col-form-label">Gender</label>
           <div class="col-lg-10">
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1">
+              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault1" value="1">
               <label class="form-check-label" for="flexRadioDefault1">
                 Male
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" checked>
+              <input class="form-check-input" type="radio" name="gender" id="flexRadioDefault2" value = "0" checked>
               <label class="form-check-label" for="flexRadioDefault2">
                 Female  
               </label>
@@ -73,9 +73,9 @@
             <div class="col-lg-10">
               <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
               <div class="form-floating" style="width:72%">
-                <select class="form-select" id="floatingSelect" aria-label="Floating label select example" size="">
-                  <option value="1">Unmarried</option>
-                  <option value="2">Married</option>
+                <select name="marital_status" class="form-select" id="floatingSelect" aria-label="Floating label select example" size="">
+                  <option value="0">Unmarried</option>
+                  <option value="1">Married</option>
                 </select>
                 <label for="floatingSelect">Marital Status</label>
               </div>
@@ -95,7 +95,8 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div class="form-check form-switch">
-              <input name="self_employed" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+              <input name="self_employed" class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" value="1">
+        
             </div>
           </div>
         </div>
@@ -160,10 +161,10 @@
           <div class="col-lg-10">
             <!-- <input type="password" class="form-control" id="inputPassword" style="width:60%"> -->
             <div class="form-floating">
-              <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
-                <option value="urban" selected>Urban</option>
-                <option value="rural">Rual</option>
-                <option value="semi-urban">Semi-Urban</option>
+              <select name="property_area" class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                <option value="1" selected>Urban</option>
+                <option value="2">Rual</option>
+                <option value ="3">Semi-Urban</option>
               </select>
               <label for="floatingSelect">Property Type</label>
             </div>
