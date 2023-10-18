@@ -13,8 +13,8 @@
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Status", "Probability", { role: "style" } ],
-        ["Approved", {{ predict_proba[0][1] }}, "#00ff00"],
-        ["Rejected", {{ predict_proba[0][0] }}, "#ff0000"]
+        ["Approved", {{ predict_proba[0][0] }}, "#00ff00"],
+        ["Rejected", {{ predict_proba[0][1] }}, "#ff0000"]
 
       ]);
 
